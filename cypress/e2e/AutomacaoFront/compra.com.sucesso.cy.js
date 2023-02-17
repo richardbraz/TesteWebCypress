@@ -5,6 +5,8 @@ describe('Testes de compra', () => {
 
 
 //Teste de compra com sucesso
+         
+cy.clearCookies
         cy.visit('https://www.saucedemo.com/')
         cy.get('[data-test="username"]').click().type('performance_glitch_user')
         cy.wait(1500)

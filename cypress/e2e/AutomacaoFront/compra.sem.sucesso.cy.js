@@ -4,6 +4,7 @@ describe('Testes de compra', () => {
     it('CT001 - Realizar uma compra sem sucesso', () => {
 
 //Teste de compra semm sucesso
+cy.clearCookies
         cy.visit('https://www.saucedemo.com/')
         cy.get('[data-test="username"]').click().type('problem_user')
         cy.wait(1500)
