@@ -28,5 +28,4 @@ Linha de comando por terminal ou cmd, na pasta do projeto:
 ```bash
 npx cypress run
 
-npx cypress open via interface
-```
+Testes Web realizados com o Cypress
