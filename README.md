@@ -1,8 +1,5 @@
 Clone o projeto para uma pasta qualquer em seu SO
 
-```bash 
-git clone https://github.com/richardbraz/TesteWebCypress.git
-```
 # Instalando
 
 Execute o comando para baixar e instalar todas as dependências do projeto (package.json):

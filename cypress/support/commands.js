@@ -1,25 +1,32 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// Comandos para diversas funcionalidades e telas
+
+// Botão "Finalizar Contrato"
+
+Cypress.Commands.add('btnFinalizar', () => {
+    cy.get('.css-1f8spr7 > [data-testid="form-action-confirm"]').click()
+})
+
+// Botão "Continuar"
+Cypress.Commands.add('btnContinuar', () => {
+    cy.get('[data-testid="form-action-confirm"]').click();
+});
+
+// Botão "Cancelar"
+Cypress.Commands.add('btnCancelar', () => {
+    cy.get('.css-k676u0 > :nth-child(2)').click();
+});
+
+//Botão "Voltar"
+Cypress.Commands.add('btnVoltar', () => {
+    cy.get('.css-k676u0 > :nth-child(1)').click();
+})
+
+// Confirmar titulo da página de acesso
+Cypress.Commands.add('verTituloPagina', () => {
+    return cy.get('[data-testid="form-heading"] > .chakra-heading');
+});
+
+// Campo "Telefone"
+Cypress.Commands.add('numTelefone', () => {
+    cy.get('[data-testid="telefone"]')
+})
